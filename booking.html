@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <script src="js/booking.js" defer></script>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Web Development" >
+    <meta name="keywords" content="Register Page" >
+    <meta name="author" content="Raphael Keam" >
+    <title>Keam Movies</title>
+</head>
+<body>
+    <header>
+        <p>Where classics stay on screen.</p>
+        <p>Open 09:00 - 01:00</p>
+        <p>Everyday of the week</p>
+        <!-- logo made in photoshop, by myself -->
+        <div class="klogo"><img class="klogo" src="images/logo.png" alt="Keam Movies Logo" width="100" height="50"></div>   
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="movies.html">Movies</a></li>
+            <li><a href="recommend.html">Recommendations</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="register.html">Sign Up</a></li>
+        </ul>
+    </nav>
+        <div id="scrnOverlay"></div>
+    	<form id="regtest" method="post"
+		action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php">
+
+		<fieldset>
+			<legend>Customer Information</legend>
+
+			<div class="textinput">
+				<label for="uname">Full Name</label>
+				<input id="uname" type="text" name="uname" />
+			</div>
+
+			<div class="textinput">
+				<label for="sid">Email</label>
+				<input id="sid" type="text" name="id" />
+			</div>
+
+            <div class="textinput">
+				<label for="phone">Phone Number</label>
+				<input id="phone" type="text" name="phone" />
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>Movie Information</legend>
+
+            <div class="selectinput">
+                <span>Select Day</span>
+                <select id="dayselect" name="dayselect">
+                <option value="">-- Please select a day --</option>
+                </select>
+            </div>
+
+            <div class="selectinput">
+                <span>Movie Selection</span>
+                <select id="movieselect">
+                    <option value="defualt">-- Please select a movie --</option>
+                    <option value="10 Things I Hate About You">10 Things I Hate About You</option>
+                    <option value="Cloudy With A Chance Of Meat Balls">Cloudy With A Chance Of Meat Balls</option>
+                    <option value="Flipped">Flipped</option>
+                    <option value="Transformers One">Transformers One</option>
+                    <option value="Spirited Away">Spirited Away</option>
+                    <option value="The Truman Show">The Truman Show</option>
+                    <option value="Tangled">Tangled</option>
+                    <option value="Scary Movie">Scary Movie</option>
+                    <option value="Blade Runner 2049">Blade Runner 2049</option>
+                    <option value="Cyberpunk Edgerunners 2 Premiere">Cyberpunk Edgerunners 2 Premiere</option>
+                </select>
+            </div>
+            <div class="selectinput">
+                <span>Select Showtime</span>
+                <select id="timeSelect" disabled>
+                <option value="defualt">-- Select a time --</option>
+                </select>
+            </div>
+        </fieldset>
+        <fieldset>
+			<legend>Ticket Information</legend>
+            <div class="headingtooltip">
+                <div class="tooltip"> Child (0-17): $11 <span class="tooltiptext">Some movies may require child supervision.</span></div> 
+                | Adult (18+): $22 
+                | <div class="tooltip"> Concession: $9 <span class="tooltiptext">Concession Verification may occur on visit.</span></div> 
+                | <div class="tooltip"> IMAX: Original Price + $10 <span class="tooltiptext">If addon isn't included in initial order on site purchase will be required.</span></div>
+			</div>
+                <div class="radioinput">
+                <span class="radiolabel">Adult Ticket (+18)</span>
+
+                <input id="adult_0" type="radio" name="adult_tickets" value="0" checked />
+                <label for="adult_0">0</label>
+
+                <input id="adult_1" type="radio" name="adult_tickets" value="1" />
+                <label for="adult_1">1</label>
+
+                <input id="adult_2" type="radio" name="adult_tickets" value="2" />
+                <label for="adult_2">2</label>
+
+                <input id="adult_3" type="radio" name="adult_tickets" value="3" />
+                <label for="adult_3">3</label>
+
+                <input id="adult_4" type="radio" name="adult_tickets" value="4" />
+                <label for="adult_4">4</label>
+
+                <input id="adult_5" type="radio" name="adult_tickets" value="5" />
+                <label for="adult_5">5</label>
+
+                <input id="adult_6" type="radio" name="adult_tickets" value="6" />
+                <label for="adult_6">6</label>
+
+                <input id="adult_7" type="radio" name="adult_tickets" value="7" />
+                <label for="adult_7">7</label>
+
+                <input id="adult_8" type="radio" name="adult_tickets" value="8" />
+                <label for="adult_8">8</label>
+
+                <input id="adult_9" type="radio" name="adult_tickets" value="9" />
+                <label for="adult_9">9</label>
+
+                <input id="adult_10" type="radio" name="adult_tickets" value="10" />
+                <label for="adult_10">10</label>
+            </div>
+
+            <div class="radioinput">
+                <span class="radiolabel">Child Ticket (0-17)</span>
+
+                <input id="child_0" type="radio" name="child_tickets" value="0" checked />
+                <label for="child_0">0</label>
+
+                <input id="child_1" type="radio" name="child_tickets" value="1" />
+                <label for="child_1">1</label>
+
+                <input id="child_2" type="radio" name="child_tickets" value="2" />
+                <label for="child_2">2</label>
+
+                <input id="child_3" type="radio" name="child_tickets" value="3" />
+                <label for="child_3">3</label>
+
+                <input id="child_4" type="radio" name="child_tickets" value="4" />
+                <label for="child_4">4</label>
+
+                <input id="child_5" type="radio" name="child_tickets" value="5" />
+                <label for="child_5">5</label>
+
+                <input id="child_6" type="radio" name="child_tickets" value="6" />
+                <label for="child_6">6</label>
+
+                <input id="child_7" type="radio" name="child_tickets" value="7" />
+                <label for="child_7">7</label>
+
+                <input id="child_8" type="radio" name="child_tickets" value="8" />
+                <label for="child_8">8</label>
+
+                <input id="child_9" type="radio" name="child_tickets" value="9" />
+                <label for="child_9">9</label>
+
+                <input id="child_10" type="radio" name="child_tickets" value="10" />
+                <label for="child_10">10</label>
+            </div>
+
+            <div class="radioinput">
+                <span class="radiolabel">Concession</span>
+
+                <input id="concession_0" type="radio" name="concession_tickets" value="0" checked />
+                <label for="concession_0">0</label>
+
+                <input id="concession_1" type="radio" name="concession_tickets" value="1" />
+                <label for="concession_1">1</label>
+
+                <input id="concession_2" type="radio" name="concession_tickets" value="2" />
+                <label for="concession_2">2</label>
+
+                <input id="concession_3" type="radio" name="concession_tickets" value="3" />
+                <label for="concession_3">3</label>
+
+                <input id="concession_4" type="radio" name="concession_tickets" value="4" />
+                <label for="concession_4">4</label>
+
+                <input id="concession_5" type="radio" name="concession_tickets" value="5" />
+                <label for="concession_5">5</label>
+
+                <input id="concession_6" type="radio" name="concession_tickets" value="6" />
+                <label for="concession_6">6</label>
+
+                <input id="concession_7" type="radio" name="concession_tickets" value="7" />
+                <label for="concession_7">7</label>
+
+                <input id="concession_8" type="radio" name="concession_tickets" value="8" />
+                <label for="concession_8">8</label>
+
+                <input id="concession_9" type="radio" name="concession_tickets" value="9" />
+                <label for="concession_9">9</label>
+
+                <input id="concession_10" type="radio" name="concession_tickets" value="10" />
+                <label for="concession_10">10</label>
+            </div>
+            
+            <div class="checkbox-imax">
+                <input type="checkbox" id="imax_ticket" name="imax_ticket" value="15">
+                <label for="imax_ticket">I'm watching my film in IMAX</label><br>
+            </div>
+
+            <div class="total-display">
+                Total Price: $<span id="totalPrice">0.00</span>
+            </div>
+            <div class="textarea">
+                <label>Special requests (optional)</label><br>
+                <textarea name="comments" rows="10" cols="100">Enter comments here...</textarea>
+            </div>
+		</fieldset>
+
+        <fieldset>
+			<legend>Billing Information</legend>
+
+            <div class="selectinput">
+                <span>Online Payment</span>
+                <select id="paymentmethod">
+                    <option value="0">-- Select a Payment Method --</option>
+                    <option value="1">Mastercard/Visa</option>
+                    <option value="2">Amex</option>
+                    <option value="3">Voucher</option>
+                </select>
+            </div>   
+
+			<div class="textinput" id="cardnumberContainer">
+				<label for="cardnumber">Card Number</label>
+				<input id="cardnumber" type="text" name="cardnumber" />
+			</div> 
+            
+            <div class="textinput" id="cardpinContainer">
+				<label for="cardpin">Card Pin</label>
+				<input id="cardpin" type="text" name="cardpin" />
+			</div>
+            <div class="textinput">
+				<label for="bill">Billing Email</label>
+				<input id="bill" type="text" name="id" />
+			</div>   
+		</fieldset>
+
+        <div class="sameEmail">
+            <input type="checkbox" id="sameEmail">
+            <label for="sameEmail">Same Email</label>
+        </div>
+
+
+		<div class="buttoninput">
+			<input type="submit" value="Submit" />
+		</div>
+	</form>
+
+
+
+
+
+    <section>
+        <div class="slider">
+            <div class="collection">
+                <div class="add">Monday - Cult Classics</div>
+                <div class="add">Tuesday - Buy 1 Get 1 Free</div>
+                <div class="add">Wednesday - Student Night 50% Off</div>
+                <div class="add">Thursday - Family Day Out</div>
+                <div class="add">Friday - Spooky Classics</div>
+                <div class="add">Saturday - Popcorn Maddness</div>
+                <div class="add">Sunday - Poster Sales</div>
+            </div>
+            <div aria-hidden class="collection">
+                <div class="add">Monday - Cult Classics</div>
+                <div class="add">Tuesday - Buy 1 Get 1 Free</div>
+                <div class="add">Wednesday - Student Night 50% Off</div>
+                <div class="add">Thursday - Family Day Out</div>
+                <div class="add">Friday - Spooky Classics</div>
+                <div class="add">Saturday - Popcorn Maddness</div>
+                <div class="add">Sunday - Poster Sales</div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Copyright: 2026</p>
+        <p>Contact: 104567376@student.swin.edu.au</p>
+        <p>Made by Raphael Keam - 104567376</p>
+        <img class="sblogo" src="images/sblogo.png" alt="Swinburne Logo" width="100" height="50">
+    </footer>     
+</body>
+</html>

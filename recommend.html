@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/recommend.js" defer></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.datatables.net/2.0.2/js/dataTables.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Web Development" >
+    <meta name="keywords" content="Recommendations Page" >
+    <meta name="author" content="Raphael Keam" >
+    <title>Keam Movies</title>
+</head>
+<body>
+    <header>
+        <p>Where classics stay on screen.</p>
+        <p>Open 09:00 - 01:00</p>
+        <p>Everyday of the week</p>
+        <!-- logo made in photoshop, by myself -->
+        <div class="klogo"><img class="klogo" src="images/logo.png" alt="Keam Movies Logo" width="100" height="50"></div>  
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="movies.html">Movies</a></li>
+            <li><a href="recommend.html">Recommendations</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="register.html">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <table id="example" class="display">
+		<thead>
+			<tr>
+				<th>Movie Name</th>
+				<th>Age Group</th>
+				<th><div class="tooltip"> Genre <span class="tooltiptext">To view more than 1 genre at a time use control/command + click, this can also be used to remove a selection.</span></div> </th>
+                <th>Viewing Preference</th>
+				<th><div class="tooltip"> Availablity <span class="tooltiptext">Book Now means in theatre, Coming Soon means arrving in theatre soon, On Break means recently finished theatre run and will be back later.</span></div> </th>
+			</tr>
+		</thead>
+		<tbody>
+            <tr>
+                    <td>10 Things I Hate About You</td>
+                    <td>Teen, Adult</td>
+                    <td>Romance, Teen Comedy</td>
+                    <td>Date Night</td>
+                    <td><a href="movies.html#10ThingsIHateAboutYou" rel="10 Things I Hate About You">Book Today</a></td>
+            </tr>
+            <tr>
+                    <td>Cloudy With A Chance Of Meatballs</td>
+                    <td>Child, Teen</td>
+                    <td>Comedy</td>
+                    <td>Family</td>
+                    <td><a href="movies.html#cwcm">Book Today</a></td>
+            </tr>
+            <tr>
+                    <td>Flipped</td>
+                    <td>Child, Teen, Adult</td>
+                    <td>Comedy, Coming-of-age, Drama, Romantic, Young Adult</td>
+                    <td>Date Night, Family</td>
+                    <td><a href="movies.html#flipped">Book Today</a></td>
+            </tr>
+            <tr>
+                    <td>Transformer One</td>
+                    <td>Child, Teen</td>
+                    <td>Action, Adventure, Fantasy, Science Fiction</td>
+                    <td>Family, Friends</td>
+                    <td><a href="movies.html#tf1">Book Today</a></td>
+            </tr>
+            <tr>
+                    <td>Spirited Away</td>
+                    <td>Child, Teen, Adult</td>
+                    <td>Adventure, Anime, Coming-of-age, Fantasy</td>
+                    <td>Family</td>
+                    <td><a href="movies.html#spaway">Book Today</a></td>
+            </tr>
+            <tr>
+                    <td>The Truman Show</td>
+                    <td>Teen, Adult</td>
+                    <td>Comedy, Drama, Science Fiction</td>
+                    <td>Friends, Solo</td>
+                    <td><a href="movies.html#truman">Book Today</a></td>
+            </tr>
+            <tr>
+                    <td>Tangled</td>
+                    <td>Child, Teen</td>
+                    <td>Adventure, Comedy, Fantasy, Musical, Romance</td>
+                    <td>Family, Friends</td>
+                    <td><a href="movies.html#tangled">Book Today</a></td>
+            </tr>
+            <tr>
+                    <td>Scary Movie</td>
+                    <td>Teen, Adult</td>
+                    <td>Comedy, Psychological, Horror, Slasher, Supernatural</td>
+                    <td>Family</td>
+                    <td><a href="movies.html#scarym">Book Today</a></td>
+            </tr>
+            <tr>
+                    <td>Blade Runner 2049</td>
+                    <td>Adult</td>
+                    <td>Cyberpunk, Drama, Thriller, Science Fiction</td>
+                    <td>Friends, Solo</td>
+                    <td><a href="movies.html#cwcm">Book Today</a></td>
+            </tr>
+            <tr>
+                    <td>Cyberpunk Edgerunners 2 Premiere</td>
+                    <td>Adult</td>
+                    <td>Action, Anime, Cyberpunk, Science Fiction</td>
+                    <td>Friends, Date Night, Solo</td>
+                    <td><a href="movies.html#cwcm">Book Today</a></td>
+            </tr>
+            <tr>
+                    <td>Star Wars Episodes 1-3</td>
+                    <td>Child, Teen, Adult</td>
+                    <td>Comedy, Coming-of-age, Drama, Romantic, Young Adult</td>
+                    <td>Family</td>
+                    <td>Coming Soon</td>
+            </tr>
+            <tr>
+                    <td>Cyberpunk Edgerunners Marathon</td>
+                    <td>Adult</td>
+                    <td>Comedy, Coming-of-age, Romance, Romantic, Young Adult, Science Fiction</td>
+                    <td>Date Night</td>
+                    <td>Coming Soon</td>
+            </tr>
+            <tr>
+                    <td>Minions</td>
+                    <td>Kids</td>
+                    <td>Action, Comedy, Science Fiction</td>
+                    <td>Family</td>
+                    <td>On Break</td>
+            </tr>
+            <tr>
+                    <td>Saving Private Ryan</td>
+                    <td>Teen, Adult</td>
+                    <td>Action, Drama, Young Adult</td>
+                    <td>Family</td>
+                    <td>On Break</td>
+            </tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<th>Movie Name</th>
+				<th>Age Group</th>
+                <th>Genre</th>
+                <th>Viewing Preference</th>
+				<th>Availability</th>
+			</tr>
+		</tfoot>
+    </table>
+
+    <section>
+        <div class="slider">
+            <div class="collection">
+                <div class="add">Monday - Cult Classics</div>
+                <div class="add">Tuesday - Buy 1 Get 1 Free</div>
+                <div class="add">Wednesday - Student Night 50% Off</div>
+                <div class="add">Thursday - Family Day Out</div>
+                <div class="add">Friday - Spooky Classics</div>
+                <div class="add">Saturday - Popcorn Maddness</div>
+                <div class="add">Sunday - Poster Sales</div>
+            </div>
+            <div aria-hidden class="collection">
+                <div class="add">Monday - Cult Classics</div>
+                <div class="add">Tuesday - Buy 1 Get 1 Free</div>
+                <div class="add">Wednesday - Student Night 50% Off</div>
+                <div class="add">Thursday - Family Day Out</div>
+                <div class="add">Friday - Spooky Classics</div>
+                <div class="add">Saturday - Popcorn Maddness</div>
+                <div class="add">Sunday - Poster Sales</div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Copyright: 2026</p>
+        <p>Contact: 104567376@student.swin.edu.au</p>
+        <p>Made by Raphael Keam - 104567376</p>
+        <img class="sblogo" src="images/sblogo.png" alt="Swinburne Logo" width="100" height="50">
+    </footer>     
+</body>
+</html>
