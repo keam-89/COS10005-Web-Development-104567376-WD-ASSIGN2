@@ -1,0 +1,451 @@
+/* index */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #f5f5dc;
+}
+footer{
+    border-top: 5em solid #232323;
+}
+footer p {
+    text-align: left;
+    position: static;
+    padding-left: 9.5em;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 4px;
+}
+.headingUpSession {
+    height: auto;
+    min-height: 5em;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #232323;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,.35);
+}
+.headingUpSession h2 {
+    margin-bottom: 5px;
+}
+.headingUpSession p {
+    margin: 2px 0;
+}
+.arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;   
+}
+section .todaysess {
+    display: grid;
+    align-items: center;
+}
+table {
+    margin: 1em auto;
+    background-color: white;
+    border: 1px solid black;
+}
+th, td {
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px 70px;
+}
+th {
+    font-weight: bold;
+}
+.standard {
+    color:blue;
+    font-weight: bold;
+}
+.extLarge {
+    color: purple;
+    font-weight: bold;
+}
+.IMAX {
+    color: red;
+    font-weight: bold;
+}
+td a{
+    color: darkblue;
+}
+td a:hover{
+    color:palevioletred;
+}
+
+/* movies */
+.movie_card {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2em auto;
+    padding: 0 1em;
+}
+.poster {
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,.35);
+}
+.movie_info {    
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+    background: #232323;
+    padding: 2.5em;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.35);
+    color: white;
+    
+    margin: 0;
+}
+.movie_info h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+.movie_info p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    line-height: 1.5;
+}
+.movie_info .rating {
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+    display: block;
+}
+.movie_info table {
+    width: 100%;
+    max-width: 500px;
+    margin: 1.5em auto;
+    color: #000;
+}
+.movie_info th, .movie_info td {
+    color: #000;
+}
+.movie_info .youtube {
+    color: #2c87ff;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-top: 1em;
+}
+.movie_info .youtube:hover {
+    color: palevioletred;
+}
+
+/* Splash Screen - design credit below */
+/** https://www.youtube.com/watch?v=2ak37WrbSDg **/
+header, footer {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+header p {
+    text-align: left;
+    position: static;
+    padding-left: 7.5em;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 4px;
+}
+.klogo, .sblogo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2%;
+}
+.intro {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #161616;
+    transition: 1s;
+}
+.logo-header {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.logo {
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+.logo.active {
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+.logo.fade {
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
+
+/* Nav bar - design credit below */
+/** https://www.youtube.com/watch?v=wPsSECNM-l0 **/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav{
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #232323;
+    padding: 18px 30px;
+    /*border-radius: 20px;*/
+    box-shadow: 0 5px 15px rgba(0,0,0,.35);
+}
+nav ul{
+    display: flex;
+    gap: 18px;
+    list-style: none;
+    align-items: center;
+}
+nav a{
+    position: relative;
+    display: block;
+    padding: 12px 22px;
+    border-radius: 100px;
+    text-decoration: none;
+    color: #ececec;
+    font-size: 20px;
+    font-weight: 500;
+    transition: .35s ease;
+    overflow: hidden;
+}
+nav a:hover{
+    color: #fff;
+    transform: translateY(-5px);
+    font-size: 21px;
+}
+nav a::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    background: linear-gradient(135deg,#2151d3, rgb(184, 93, 108));
+    opacity: 0;
+    z-index: -1;
+    transition: .35s;
+}
+nav a:hover::before{
+    opacity: 1;
+}
+
+/* Movie scroll - desgin credit below */
+/** https://www.youtube.com/watch?v=KD1Yo8a_Qis **/
+.carousel {
+    /*margin: 100px auto;
+    width: 100%;
+    border: 5px solid red;*/
+    display: flex;
+    overflow-x: auto;
+}
+.carousel::-webkit-scrollbar,
+.slider::-webkit-scrollbar {
+    display: none;
+}
+.group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0em;
+    animation: spin 35s infinite linear;
+    /*padding-right: 1em;*/
+}
+.card {
+    flex: 0 0 1em;
+    /**height: 5em;**/
+    /**padding: 1em;**/
+    /**background: cornflowerblue;**/
+    font-size: 3rem;
+    border-radius: .2em;
+    text-align: center;
+    align-content: center;
+}
+@keyframes spin {
+    from {translate: 0;}
+    to {translate: -100%;}
+}
+.slider {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+    background-color: #232323;
+}
+.collection {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 100%;
+    flex-shrink: 0;
+    gap: 3em;
+    animation: spin 35s infinite linear;
+    padding-right: 2em;
+}
+.add {
+    flex: 0 0 auto;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+@keyframes spin {
+    from {translate: 0;}
+    to {translate: -100%;}
+}
+
+
+/* register */
+form {
+    padding-top: 2em;
+    width: 50em;
+    margin: 2em auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form fieldset {
+    width: 100%;
+    margin-bottom: 1.5em;
+    padding: 1.5em;
+    border: 1px solid;
+}
+.signupadd {
+    display: block;
+    margin: 1.5em auto 0 auto; /* Centers the image below the form */
+}
+.textinput {
+	display: flex;              /* place label and input in one row */
+	align-items: center;        /* vertically align label and input */
+	margin: 10px;               /* spacing between rows */
+}
+.textinput label {
+	text-align: right;          /* align label text to the right */
+	width: 10em;                /* fixed label width */
+	margin-right: 1em;          /* space between label and input */
+}
+.textinput input {
+	width: 50%;                 /* consistent input width */
+}
+.radioinput {
+	display: flex;              /* place Gender, radio buttons and labels in one row */
+	align-items: center;        /* vertically align items */
+	margin: 10px;               /* spacing around the radio input row */
+}
+.radiolabel {
+	text-align: right;          /* align text to the right */
+	width: 10em;                /* match text input label width */
+	margin-right: 1em;          /* space between label and radio buttons */
+}
+.radioinput input {
+	width: 2em;                 /* small width for radio buttons */
+}
+.radioinput label {
+	text-align: left;           /* align radio label text to the left */
+	margin-right: 1em;          /* space between options */
+}
+.buttoninput {
+	text-align: right;          /* align button to the right */
+	margin: 10px;
+}
+.buttoninput input {
+	width: 20em;                /* keep button width natural */
+    background-color: white;
+}
+.buttoninput input:hover{
+    background-color: blue;
+    color: white;
+}
+.selectinput {
+	display: flex;              /* place label and input in one row */
+	align-items: center;        /* vertically align label and input */
+	margin: 10px;               /* spacing between rows */
+}
+.selectinput span {
+	text-align: right;          /* align label text to the right */
+	width: 10em;                /* fixed label width */
+	margin-right: 1em;          /* space between label and input */
+}
+.multiselectinput {
+	display: flex;
+	align-items: center;
+	margin: 10px;
+}
+.multiselectinput span {
+	text-align: right;
+	width: 16em;
+	margin-right: 1em;
+}
+
+/*Booking*/
+.headingtooltip {
+    text-align: right;
+	width: auto;
+	margin-right: 1em; 
+    font-size: large;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  cursor: pointer;
+}
+.tooltiptext {
+  visibility: hidden;
+  width: 130px;
+  background-color: black;
+  color: #ffffff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.total-display {
+    padding-left: 1em;
+    padding-top: 1em;
+}
+.checkbox-imax {
+    padding-left: 2em;
+}
+.textarea {
+    padding-top: 1em;
+    padding-left: 1em;
+}
+.hidden {
+    display: none;
+}
+.sameEmail {
+    margin-bottom: 1px;
+}
